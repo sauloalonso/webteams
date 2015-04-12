@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipe:</strong>
+  <%= @uniforme.equipe %>
+</p>
+
+<p>
+  <strong>Cor:</strong>
+  <%= @uniforme.cor.nome %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @uniforme.modelo.nome %>
+</p>
+
+<%= tag("img", src: @uniforme.modelo.avatar.url(:medium),
+    style: "background-color:#{@uniforme.cor.hexadecimal};" )%>
+<br/>
+
+<%= link_to 'alterar', edit_uniforme_path(@uniforme) %> |
+<%= link_to 'voltar', uniformes_path %>
+

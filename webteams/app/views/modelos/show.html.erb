@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @modelo.nome %>
+</p>
+
+<div>
+    <strong>Avatar:</strong>
+    <%= image_tag @modelo.avatar.url(:medium) %>
+</div>
+
+<%= link_to 'alterar', edit_modelo_path(@modelo) %> |
+<%= link_to 'voltar', modelos_path %>

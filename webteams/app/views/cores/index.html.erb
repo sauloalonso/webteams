@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Gerenciar Cores</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Amostra</th>
+      <th>Hexadecimal</th>
+      <th colspan="3">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cores.each do |cor| %>
+      <tr>
+        <td><%= cor.nome %></td>
+        <%= tag("td", style: "background-color: #{cor.hexadecimal};" ) %>
+        <td><%= cor.hexadecimal %></td>
+        <td><%= link_to 'mostrar', cor %></td>
+        <td><%= link_to 'alterar', edit_cor_path(cor) %></td>
+        <td><%= link_to 'apagar', cor, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'nova cor', new_cor_path %>

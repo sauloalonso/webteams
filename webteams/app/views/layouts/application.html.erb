@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Webteams</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+    </head>
+
+<body>
+
+    <body>
+
+        <div class="tudo">
+
+            <div class="topo">
+                <h1>webteams</h1>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><%= link_to 'modelos', modelos_path %></li>
+                    <li><%= link_to 'uniformes', uniformes_path %></li>
+                    <li><%= link_to 'cores', cores_path %></li>
+                </ul>
+
+
+            </div>
+
+            <div class="principal">
+                     <div class="rails"> <%= yield %></div>
+            </div>
+
+            <div class="clear"> </div>
+
+        </div>
+
+</body>
+</html>

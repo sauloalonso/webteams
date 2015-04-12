@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cor.nome %>
+</p>
+
+<p>
+  <strong>Hexadecimal:</strong>
+  <%= @cor.hexadecimal %>
+</p>
+
+<%= link_to 'alterar', edit_cor_path(@cor) %> |
+<%= link_to 'voltar', cores_path %>

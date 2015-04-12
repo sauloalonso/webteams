@@ -1,0 +1,33 @@
+<%= form_for(@uniforme) do |f| %>
+  <% if @uniforme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@uniforme.errors.count, "error") %> prohibited this uniforme from being saved:</h2>
+
+      <ul>
+      <% @uniforme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :equipe %><br>
+    <%= f.text_field :equipe %>
+  </div>
+  <div class="field">
+    <%= f.label :cor %><br>
+    <%= f.collection_select(:cor_id, Cor.all, :id, :nome, prompt: true) %>
+  </div>
+  <div class="field">
+    <%= f.label :modelo %><br>
+    <%= f.collection_select(:modelo_id, Modelo.all, :id, :nome, prompt: true) %>
+  </div>
+
+  <div class="field">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+</br>
+<% end %>

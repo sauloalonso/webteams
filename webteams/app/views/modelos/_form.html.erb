@@ -1,0 +1,30 @@
+<%= form_for @modelo, :html => { :multipart => true } do |f| %>
+  <% if @modelo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modelo.errors.count, "error") %> prohibited this modelo from being saved:</h2>
+
+      <ul>
+      <% @modelo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+
+    <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="field">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+  </br>
+<% end %>

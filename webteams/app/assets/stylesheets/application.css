@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* CSS para Uma marcacao - Varios templates */
+/* Estilos geral */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: verdana,helvetica, arial;
+}
+
+div.rails{
+    padding: 3%;
+}
+
+body{
+    background: url('bg.png') repeat;
+}
+
+ul{
+    display: block;
+}
+ul li{
+    display: block;
+    background-color: #eee;
+}
+ul li a {
+    padding: 1%;
+    display: block;
+}
+.topo{
+  background: -webkit-linear-gradient(#000, #333); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000, #333); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#000, #333); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000, #333); /* Standard syntax */
+}
+
+.topo h1 {
+    font-size: 50px;
+    border-bottom-color: #f60;
+    border-bottom-style: solid;
+    border-top-color: #f60;
+    border-top-style: solid;
+    padding: 2%;
+    color: #fff;
+}
+
+.tudo{
+    width: 80%;
+    background: #fff;
+    margin: auto auto;
+    display: table;
+    height: 100%;
+    box-shadow: 0px 5px 5px black;
+}
+
+.nav{
+    width: 20%;
+    float: left;
+    background: #eee;
+    border-right-style: dotted;
+    border-right-width: 1px;
+    border-right-color: #ccc;
+}
+
+.principal{
+    width: 80%;
+    background: #fff;
+    margin-left: 20%;
+}
+
+.clear { clear: both; }
+
+
+a {
+        font-weight: bold;
+        color: #000;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover {
+    color: #f60;
+    font-weight: bold;
+    background-color: #000;
+}
+
+#notice {
+  color: #333;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: #f60;
+  display: table;
+}
+
+tbody, table, tr{
+    width: 100%;
+}
+
+th{
+    background-color: #eee;
+    padding:1%;
+}
+
+.field{
+    padding: 2%;
+}

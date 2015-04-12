@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Gerenciar Uniformes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equipe</th>
+      <th>Cor</th>
+      <th>Modelo</th>
+      <th colspan="3">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uniformes.each do |uniforme| %>
+      <tr>
+        <td><%= uniforme.equipe %></td>
+        <td><%= uniforme.cor.nome %></td>
+        <td><%= uniforme.modelo.nome %></td>
+        <td><%= link_to 'mostrar', uniforme %></td>
+        <td><%= link_to 'editar', edit_uniforme_path(uniforme) %></td>
+        <td><%= link_to 'apagar', uniforme, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'novo uniforme', new_uniforme_path %>

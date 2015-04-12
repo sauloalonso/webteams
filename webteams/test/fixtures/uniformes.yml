@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  equipe: MyString
+  cor_id: 
+  modelo_id: 
+
+two:
+  equipe: MyString
+  cor_id: 
+  modelo_id: 
